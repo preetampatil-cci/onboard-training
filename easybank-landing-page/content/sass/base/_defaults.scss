@@ -1,0 +1,38 @@
+/* Base Stylings like ul, p, body, etc */
+
+/* Body & Html */
+body,
+html {
+	height: 100%;
+	@include font-size($font-size-base);
+	color: $font-size-base;
+	font-family: $font-primary;
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	transition: 0.5s;
+	// letter-spacing: 0.75px;
+}
+
+a {
+	color: $font-size-base;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+/* Paragraphs */
+p {
+	@include font-size(14px);
+	color: $grayish-blue-100;
+	@include media-breakpoint-up(md) {
+		@include font-size($font-size-para);
+	}
+}
+
+/* Strong */
+strong,
+b {
+	font-weight: $font-weight-bold;
+}

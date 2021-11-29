@@ -1,0 +1,26 @@
+/* HEADINGS */
+
+h1 {
+    @include font-size(36px);
+    font-weight: $font-weight-normal;
+    color: $dark-blue;
+}
+
+h2 {
+    @include font-size(24px);
+    font-weight: $font-weight-normal;
+    color: $dark-blue;
+    @include media-breakpoint-up(md) {
+        @include font-size(28px);
+    }
+}
+
+h3 {
+    @include font-size(21px);
+    font-weight: $font-weight-normal;
+}
+
+@function line-height($font-size, $leading) {
+    $line-height: $font-size + ($leading/2);
+    @return $line-height;
+}

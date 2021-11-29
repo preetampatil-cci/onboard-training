@@ -1,0 +1,44 @@
+/* Footer */
+
+footer {
+    .footer-logo {
+        background: url(../images/styles-images/footer-logo.svg) no-repeat center;
+        width: 139px;
+        height: 20px;
+        display: inline-block;
+    }
+
+    $social-icons: icon-facebook icon-youtube icon-twitter icon-pinterest icon-instagram;
+    @each $social-icon in $social-icons {
+        .#{$social-icon} {
+            background: url(../images/styles-images/#{$social-icon}.svg) no-repeat center;
+            width: 21px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: bottom;
+            &:hover {
+                background: url(../images/styles-images/hover-#{$social-icon}.svg) no-repeat center;
+            }
+        }
+    }
+    .social-callout {
+        a:not(:last-child) {
+            margin-right: 7px;
+        }
+    }
+    .list-unstyled {
+        li {
+            a {
+                color: $grayish-blue-200;
+                @include font-size(14px);
+                &:hover {
+                    color: $lime-green;
+                }
+            }
+        }
+    }
+    small {
+        @include font-size(14px);
+        color: $grayish-blue-100;
+    }
+}
